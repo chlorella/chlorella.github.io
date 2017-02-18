@@ -10,7 +10,7 @@ description: A blog about technology and stuff related
 external-image: false
 picture: assets/images/profile.jpg
 
-url: http://chlorella.github.io/fancy-blog
+url: http://chlorella.github.io/
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -36,8 +36,8 @@ instagram: chlorella13
 # pinterest: mypinterest
 linkedin: mylinkedin
 youtube: carmen723
-spotify: myspotify
-github: mygithub
+#spotify: myspotify
+github: chlorella
 #stackoverflow: 7044681/mystackoverflow
 #quora: userquora
 #reddit: username
@@ -52,12 +52,6 @@ authors:
         external-image: false
         picture: assets/images/profile.jpg
         twitter: johndoe
-    jamesfoster:
-        name: James Foster
-        bio: A Man who develops software with coffee
-        external-image: false
-        picture: assets/images/james.jpg
-        twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal

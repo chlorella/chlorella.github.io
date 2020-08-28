@@ -9,10 +9,47 @@
   
   <url>
     <loc>https://chlorella.github.io/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://chlorella.github.io/categories/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/categories/collage/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/css/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/projects/hkbu_data_jour/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/html/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/javascript/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/projects/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/</loc>
+    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -21,10 +58,6 @@
   
   <url>
     <loc>https://chlorella.github.io/post/</loc>
-  </url>
-  
-  <url>
-    <loc>https://chlorella.github.io/tags/</loc>
   </url>
   
 </urlset>

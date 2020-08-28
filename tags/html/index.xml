@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on Pitch site of Carmen Chan</title>
+    <link>https://chlorella.github.io/tags/html/</link>
+    <description>Recent content in html on Pitch site of Carmen Chan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://chlorella.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HKBU JOUR-2106 (2017) Data Journalism Projects</title>
+      <link>https://chlorella.github.io/projects/hkbu_data_jour/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://chlorella.github.io/projects/hkbu_data_jour/</guid>
+      <description>Here are list of projects I have done on behalf of Data Journalism course I have token in 2017 on HKBU.</description>
+    </item>
+    
+  </channel>
+</rss>

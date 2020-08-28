@@ -6,6 +6,7 @@
     <description>Recent content on Pitch site of Carmen Chan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://chlorella.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +17,16 @@
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://chlorella.github.io/about/</guid>
-      <description>A Backend developer who graduated from Hong Kong Baptist University on (BSc) Computer Science in 2017, and started to work as a backend developer for CMS and Mobile Application&amp;rsquo;s API server at the same year.</description>
+      <description>A Backend developer who graduated from Hong Kong Baptist University on (BSc) Computer Science in 2017, and started to work as a backend developer for develop, enhence and operating CMS and Mobile Application&amp;rsquo;s API server at the same year.</description>
+    </item>
+    
+    <item>
+      <title>HKBU JOUR-2106 (2017) Data Journalism Projects</title>
+      <link>https://chlorella.github.io/projects/hkbu_data_jour/</link>
+      <pubDate>Thu, 01 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://chlorella.github.io/projects/hkbu_data_jour/</guid>
+      <description>Here are list of projects I have done on behalf of Data Journalism course I have token in 2017 on HKBU.</description>
     </item>
     
   </channel>

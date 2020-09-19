@@ -6,7 +6,7 @@
     <description>Recent content on Pitch site of Carmen Chan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jun 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://chlorella.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://chlorella.github.io/about/</guid>
       <description>A Backend developer who graduated from Hong Kong Baptist University on (BSc) Computer Science in 2017, and started to work as a backend developer for develop, enhence and operating CMS and Mobile Application&amp;rsquo;s API server at the same year.</description>
+    </item>
+    
+    <item>
+      <title>[COSCOP 2018] Introduction to Julia</title>
+      <link>https://chlorella.github.io/post/coscop_2018_intro_to_julia/</link>
+      <pubDate>Sat, 11 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://chlorella.github.io/post/coscop_2018_intro_to_julia/</guid>
+      <description>Powerpoint Hackmd playground (2020 update: Juliabox not free anymore)  Why Julia  readability as python, performance as C easy to parallelism benchmarks  JoliaInXL folia —&amp;gt; Excel JoliaBox —&amp;gt; Bo</description>
     </item>
     
     <item>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme=""><head>
-    <title> Carmen Chan | Posts </title>
+    <title> Carmen Chan | [COSCOP 2018] Introduction to Julia </title>
     <meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
     <meta name="description" content="A Backend Developer who willing to become full stack creator. Love cats, birds and any cute creature.">
     
@@ -10,16 +10,15 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://chlorella.github.io/favicons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://chlorella.github.io/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://chlorella.github.io/favicons/favicon-16x16.png">
-    <link rel="canonical" href="https://chlorella.github.io/post/">
-    <link rel="alternate" type="application/rss+xml" href="https://chlorella.github.io/post/index.xml" title="Pitch site of Carmen Chan" />
+    <link rel="canonical" href="https://chlorella.github.io/post/coscop_2018_intro_to_julia/">
     
     
     <script type="text/javascript" src="https://chlorella.github.io/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
     <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://chlorella.github.io/images/site-feature-image.png"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="A Backend Developer who willing to become full stack creator. Love cats, birds and any cute creature."/>
+<meta name="twitter:title" content="[COSCOP 2018] Introduction to Julia"/>
+<meta name="twitter:description" content="Session notes on COSCOP 2018 Introduction to Julia"/>
 
 </head><body><div class="sidebar animated fadeInDown">
     <div class="logo-title">
@@ -70,7 +69,7 @@
         
         
         
-        <li><a class="current" href="/post/" title="">Posts</a></li>
+        <li><a  href="/post/" title="">Posts</a></li>
         
         
         <li><a  href="/projects/" title="">Projects</a></li>
@@ -89,22 +88,150 @@
 
             <div class="autopagerize_page_element">
                 <div class="content">
-<div class="archive animated fadeInDown">
-   
-    <ul class="list-with-title">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>[COSCOP 2018] Introduction to Julia
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Sat, Aug 11, 2018</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">One-minute read</span>
+        </div>
+        
+        </div>
+
+    <ul>
+<li><a href="https://www.slideshare.net/ssuserd6984b/coscup-introduction-to-julia">Powerpoint</a></li>
+<li><a href="https://hackmd.io/c/coscup18-julia/coscup18-julia-introduction-to-julia">Hackmd</a></li>
+<li><a href="https://www.juliabox.com/notebook/notebooks/Introduction%20to%20Julia.ipynb">playground</a> (2020 update: Juliabox not free anymore)</li>
+</ul>
+<h2 id="why-julia">Why Julia</h2>
+<ul>
+<li>readability as python, performance as C</li>
+<li>easy to parallelism</li>
+<li><a href="https://julialang.org/benchmarks/">benchmarks</a></li>
+</ul>
+<p>JoliaInXL folia —&gt; Excel
+JoliaBox —&gt; Bo</p>
+<h2 id="use-casehttpsjuliacomputingcomcase-studies"><a href="https://juliacomputing.com/case-studies">Use case</a></h2>
+<h2 id="ide">IDE</h2>
+<ul>
+<li>jono = atom</li>
+<li>Jupyter</li>
+<li>Supported by sublime, VS code, Emacs and Vim</li>
+</ul>
+<h2 id="feature">Feature</h2>
+<ul>
+<li>Strong type, auto parse</li>
+<li>function: pass-by-sharing</li>
+<li>real array:
+<ul>
+<li>start by 1 (not 0)</li>
+<li>same type</li>
+<li>homogenous</li>
+<li>suppoet 2D array</li>
+</ul>
+</li>
+<li>String Conntection: &lsquo;*&rsquo; ( &lsquo;+&rsquo; in java )
+<ul>
+<li>e.g. <code>&quot;Hello: &quot; * name</code></li>
+</ul>
+</li>
+<li>comprehension
+<ul>
+<li><code>[x for x = 1:3]</code></li>
+</ul>
+</li>
+<li>tuple (Immutable)
+<ul>
+<li><code>tup = (1,2,3)</code></li>
+</ul>
+</li>
+<li>Set (Mutable)</li>
+<li>Dict (key-values) (Mutable)</li>
+</ul>
+<h2 id="special-features">Special Features</h2>
+<ul>
+<li>support UTF8
+<ul>
+<li><code>\alpha&lt;tab&gt;</code></li>
+</ul>
+</li>
+<li>Optimize
+<ul>
+<li>Avoid globle variable</li>
+<li>Add type delarations</li>
+<li>Measure performance by <code>@time</code> and pay attention to memory allocations</li>
+</ul>
+</li>
+<li>Parallizes
+<ul>
+<li><code>@parallel</code></li>
+</ul>
+</li>
+<li>@Code_native</li>
+<li>@code_llvm</li>
+</ul>
+<h2 id="type-system">Type System</h2>
+<ul>
+<li>Multipla dispatch</li>
+<li>Abstract Type</li>
+</ul>
+<h2 id="library">Library</h2>
+<ul>
+<li>
+<p>Data Science</p>
+<ul>
+<li>JuliaStat</li>
+<li>Gadfly.jl</li>
+<li>Plots.jl</li>
+</ul>
+</li>
+<li>
+<p>ML</p>
+<ul>
+<li>Flux.jl
+<a href="https://julialang.org/blog/2017/12/ml%26pl-zh_tw">https://julialang.org/blog/2017/12/ml&amp;pl-zh_tw</a></li>
+</ul>
+</li>
+<li>
+<p>Web framework</p>
+<ul>
+<li>Genie
+<ul>
+<li>Escher</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Intel Labs HPC</p>
+<ul>
+<li><a href="https://julialang.org/blog/2017/12/ml%26pl-zh_tw">https://julialang.org/blog/2017/12/ml&amp;pl-zh_tw</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+<span class="separator"><a class="category" href="/categories/conferences/">conferences</a></span>
+
+        
+    <span class="separator"><a class="tag" href="/tags/julia/">julia</a><a class="tag" href="/tags/coscop/">COSCOP</a></span>
+
+      </div>
+    </div>
+
+    
            
-      <div class="listing-title">2018</div>
-      
-      <ul class="listing">
-        <div class="listing-item">
-            <div class="listing-post"><a href="https://chlorella.github.io/post/coscop_2018_intro_to_julia/" title="[COSCOP 2018] Introduction to Julia">[COSCOP 2018] Introduction to Julia</a>
-              <div class="post-time"><span class="date">Aug 11</span></div>
-            </div>
-          </div>
-    </ul>
     
-    
-  </div>
+</div>
+
 
                 </div>
             </div>

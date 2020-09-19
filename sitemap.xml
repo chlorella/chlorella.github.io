@@ -9,12 +9,42 @@
   
   <url>
     <loc>https://chlorella.github.io/</loc>
-    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/post/coscop_2018_intro_to_julia/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://chlorella.github.io/categories/</loc>
-    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/categories/conferences/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/coscop/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/julia/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/post/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/</loc>
+    <lastmod>2018-08-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -48,16 +78,7 @@
   </url>
   
   <url>
-    <loc>https://chlorella.github.io/tags/</loc>
-    <lastmod>2017-06-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://chlorella.github.io/tags/index/</loc>
-  </url>
-  
-  <url>
-    <loc>https://chlorella.github.io/post/</loc>
   </url>
   
 </urlset>

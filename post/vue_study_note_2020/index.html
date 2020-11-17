@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" data-theme=""><head>
+    <title> Carmen Chan | [Web] Vue.js hands on notes </title>
+    <meta charset="utf-8"><meta name="generator" content="Hugo 0.74.3" /><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="description" content="A Backend Developer who willing to become full stack creator. Love cats, birds and any cute creature.">
+    
+    <link rel="stylesheet" href="https://chlorella.github.io/css/style.min.ef1c26beeb41dc113b0b2c514197bdbb73a61c7f832ddaeb309ba7e151912707.css" integrity="sha256-7xwmvutB3BE7CyxRQZe9u3OmHH&#43;DLdrrMJun4VGRJwc=" crossorigin="anonymous" type="text/css"><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" href="https://chlorella.github.io/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chlorella.github.io/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chlorella.github.io/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chlorella.github.io/favicons/favicon-16x16.png">
+    <link rel="canonical" href="https://chlorella.github.io/post/vue_study_note_2020/">
+    
+    
+    <script type="text/javascript" src="https://chlorella.github.io/js/anatole-header.min.7e2fc0724240b28c6e214687e73a4a6eb6c196bbace546b9dc86e94cca120b5c.js" integrity="sha256-fi/AckJAsoxuIUaH5zpKbrbBlrus5Ua53IbpTMoSC1w=" crossorigin="anonymous"></script>
+    <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://chlorella.github.io/images/site-feature-image.png"/>
+
+<meta name="twitter:title" content="[Web] Vue.js hands on notes"/>
+<meta name="twitter:description" content="Selected Hackmd on COSCOP 2018"/>
+
+</head><body><div class="sidebar animated fadeInDown">
+    <div class="logo-title">
+      <div class="title">
+        <img src="https://chlorella.github.io/images/profile.jpeg" alt="profile picture">
+        <h3 title=""><a href="/">I&#39;m Carmen Chan</a></h3>
+        <div class="description">
+          <p>A Backend Developer who willing to become full stack creator. Love cats, birds and any cute creature.</p>
+        </div>
+      </div>
+    </div>
+    <ul class="social-links">
+        
+        <li>
+        <a href="https://www.linkedin.com/in/carmen-chan-0723/" rel="me" aria-label="Linkedin">
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="https://github.com/chlorella" rel="me" aria-label="GitHub">
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+        <li>
+        <a href="mailto:chlorella2012@gmail.com" rel="me" aria-label="e-mail">
+          <i class="fa fa-2x fa-envelope" aria-hidden="true"></i>
+        </a>          
+        </li>
+
+        
+    </ul>
+    <div class="footer">
+        <div class="by_farbox">&copy; Carmen Chan 2020 </div>
+      </div>
+    </div>
+</div><div class="main">
+            <div class="page-top animated fadeInDown">
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    <ul class="nav" id="navMenu">
+        
+        
+        
+        <li><a  href="/post/" title="">Posts</a></li>
+        
+        
+        <li><a  href="/projects/" title="">Projects</a></li>
+        
+        
+        <li><a  href="/about/" title="">About</a></li>
+        
+        
+        <li class="theme-switch-item">
+        <a class="theme-switch" title="Switch Theme">
+            <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+        </a>
+        </li>
+    </ul>
+</div>
+
+            <div class="autopagerize_page_element">
+                <div class="content">
+<div class="post animated fadeInDown">
+    <div class="post-content">
+
+      <div class="post-title">
+        <h3>[Web] Vue.js hands on notes
+        </h3>
+        
+        <div class="info">
+          <i class="fa fa-sun-o"></i>
+          <span class="date">Mon, Jan 1, 0001</span>
+          <i class="fa fa-clock-o"></i><span class="reading-time">4-minute read</span>
+        </div>
+        
+        </div>
+
+    <h1 id="vue-study-note">Vue Study Note</h1>
+<p>Hands on note on studing vue js in 1 week.</p>
+<h2 id="requirement">Requirement</h2>
+<ul>
+<li>npm / yarn package mamangement</li>
+<li>IDE (Webstrom)</li>
+<li>Prism as mock server</li>
+</ul>
+<h2 id="basic-vue-concept">Basic Vue concept</h2>
+<p><a href="https://vuejs.org/v2/guide/index.html">Offical Doc</a>
+<a href="https://ithelp.ithome.com.tw/articles/10202107">Vue.js Core 30天屠龍記(第1天): 前言</a></p>
+<h3 id="template-syntax">Template syntax</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;app&#34;</span>&gt;
+      {{ message }}
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">script</span>&gt;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#a6e22e">el</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;#app&#39;</span>,
+  <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello Vue!&#39;</span>
+  }
+})
+&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h3 id="vue-attribute-綁定">Vue Attribute 綁定</h3>
+<ul>
+<li><code>v-bind</code> == <code>:</code> 將 Data 綁進屬性(class/style/)中</li>
+<li><code>v-if</code> 條件判斷， if true than rander (display)</li>
+<li><code>v-for</code> for each object in arrays, create a element</li>
+<li><code>v-on</code> == <code>@</code> 事件綁定 methods</li>
+<li><code>v-model</code> input 綁定 data</li>
+</ul>
+<p><em>Vue 指示子 <code>v-</code> Prefix</em></p>
+<h3 id="vue-instance">Vue Instance</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">vm</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#75715e">// options
+</span><span style="color:#75715e"></span>})
+</code></pre></div><h4 id="life-cycle">Life cycle</h4>
+<p><img src=":/0130716a37894763982f2a67f003cbff" alt="5dd234c8674ff30b64c4dbd318e825b2.png"></p>
+<h2 id="vue-option">Vue Option</h2>
+<h3 id="filter">filter</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- in mustaches --&gt;</span>
+{{ message | capitalize }}
+<span style="color:#75715e">&lt;!-- in v-bind --&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">v-bind:id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rawId | formatId&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">filters</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">capitalize</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">value</span>) {
+      <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">value</span>) <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#39;&#39;</span>
+      <span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">toString</span>()
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">charAt</span>(<span style="color:#ae81ff">0</span>).<span style="color:#a6e22e">toUpperCase</span>() <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>.<span style="color:#a6e22e">slice</span>(<span style="color:#ae81ff">1</span>)
+    }
+  }
+})
+</code></pre></div><p>預處理Data，可以pepiline 連續使用
+<code>{{ message | filterA('arg1', arg2) }}</code></p>
+<h3 id="computed">computed</h3>
+<p>預處理Data as value 並Cache (Computed cache)結果，如Object沒有Update 就用 cached value
+Can have getter and setter</p>
+<h3 id="watched">Watched</h3>
+<p>If property updated, run the corresponing functions for complex reaction</p>
+<h3 id="props">props</h3>
+<p>get datas from parent component
+parent component pass data by v-bind:
+allow type validation</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">component</span>(<span style="color:#e6db74">&#39;my-component&#39;</span>, {
+  <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+    <span style="color:#75715e">// 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propA</span><span style="color:#f92672">:</span> Number,
+    <span style="color:#75715e">// 多个可能的类型
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propB</span><span style="color:#f92672">:</span> [String, Number],
+    <span style="color:#75715e">// 必填的字符串
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propC</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> String,
+      <span style="color:#a6e22e">required</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+    },
+    <span style="color:#75715e">// 带有默认值的数字
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propD</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> Number,
+      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>
+    },
+    <span style="color:#75715e">// 带有默认值的对象
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propE</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">type</span><span style="color:#f92672">:</span> Object,
+      <span style="color:#75715e">// 对象或数组默认值必须从一个工厂函数获取
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> () {
+        <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;hello&#39;</span> }
+      }
+    },
+    <span style="color:#75715e">// 自定义验证函数
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">propF</span><span style="color:#f92672">:</span> {
+      <span style="color:#a6e22e">validator</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">value</span>) {
+        <span style="color:#75715e">// 这个值必须匹配下列字符串中的一个
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> [<span style="color:#e6db74">&#39;success&#39;</span>, <span style="color:#e6db74">&#39;warning&#39;</span>, <span style="color:#e6db74">&#39;danger&#39;</span>].<span style="color:#a6e22e">indexOf</span>(<span style="color:#a6e22e">value</span>) <span style="color:#f92672">!==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+      }
+    }
+  }
+})
+</code></pre></div><h3 id="component">Component</h3>
+<p>封裝可重用代碼</p>
+<h2 id="routing">Routing</h2>
+<p>library: <a href="https://router.vuejs.org/installation.html">vue-router</a></p>
+<h3 id="route-outlet">Route outlet</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">router-view</span>&gt;&lt;/<span style="color:#f92672">router-view</span>&gt;
+</code></pre></div><h3 id="define-routes">Define routes</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">routes</span> <span style="color:#f92672">=</span> [
+  { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/foo&#39;</span>, <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Foo</span>, <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+  { <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/bar&#39;</span>, <span style="color:#a6e22e">component</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">Bar</span> }
+]
+</code></pre></div><h3 id="create-the-router-instance-and-pass-the-routes-option">Create the router instance and pass the <code>routes</code> option</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">router</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">VueRouter</span>({
+  <span style="color:#a6e22e">routes</span> <span style="color:#75715e">// short for `routes: routes`
+</span><span style="color:#75715e"></span>})
+</code></pre></div><h3 id="inject-option-to-vue-instance">Inject Option to Vue Instance</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#a6e22e">router</span>
+}).<span style="color:#a6e22e">$mount</span>(<span style="color:#e6db74">&#39;#app&#39;</span>)
+</code></pre></div><h2 id="state-management">State Management</h2>
+<h3 id="store-pattern">store pattern</h3>
+<p>Create a centralized store of state</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">debug</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello!&#39;</span>
+  },
+  <span style="color:#a6e22e">setMessageAction</span> (<span style="color:#a6e22e">newValue</span>) {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">debug</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;setMessageAction triggered with&#39;</span>, <span style="color:#a6e22e">newValue</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newValue</span>
+  },
+  <span style="color:#a6e22e">clearMessageAction</span> () {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">debug</span>) <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;clearMessageAction triggered&#39;</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">message</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>
+  }
+}
+</code></pre></div><p>Apply when create component</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">vmA</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">privateState</span><span style="color:#f92672">:</span> {},
+    <span style="color:#a6e22e">sharedState</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">state</span>
+  }
+})
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">vmB</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vue</span>({
+  <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">privateState</span><span style="color:#f92672">:</span> {},
+    <span style="color:#a6e22e">sharedState</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">store</span>.<span style="color:#a6e22e">state</span>
+  }
+})
+</code></pre></div><h3 id="vuexhttpsvuexvuejsorg"><a href="https://vuex.vuejs.org">VueX</a></h3>
+<p>state management pattern + library</p>
+<p>A components basically contain three parts:</p>
+<ul>
+<li>state: the source of truth that drives our app, e.g. <code>data()</code></li>
+<li>view: a declarative mapping of the state, e.g. <code>template</code>;</li>
+<li>actions, the possible ways the state could change in reaction to user inputs from the view</li>
+</ul>
+<h4 id="one-way-data-flow">One way data flow</h4>
+<p><img src=":/6791020553b34ff99a276928697f3cae" alt="5f8341509f3460115949db5d2dece82e.png"></p>
+<p>For single components, state can be easily maintain by <code>data()</code>
+On multiple components:</p>
+<ul>
+<li>Multiple views may depend on the same piece of state.</li>
+<li>Actions from different views may need to mutate the same piece of state.</li>
+</ul>
+<h4 id="vuex-managed-state">VueX managed state</h4>
+<p><img src=":/18043ff932c74031b67c72bcc73f2a95" alt="cea592f01894129a9e321a2afd878833.png"></p>
+<p>inspired by Flux, Redux and The Elm Architecture
+Applied <strong>single state tree</strong></p>
+<h4 id="getting-start-vue-2x">Getting start (Vue 2.X)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Vue</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vue&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Vuex</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;vuex&#39;</span>
+
+<span style="color:#a6e22e">Vue</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">Vuex</span>)
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">store</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Vuex</span>.<span style="color:#a6e22e">Store</span>({
+  <span style="color:#a6e22e">state</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">count</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>
+  },
+  <span style="color:#a6e22e">mutations</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">increment</span> (<span style="color:#a6e22e">state</span>) {
+      <span style="color:#a6e22e">state</span>.<span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>
+    }
+  }
+})
+</code></pre></div><h2 id="jest-javascript-testing-frameworkhttpsjestjsio"><a href="https://jestjs.io">Jest (JavaScript Testing Framework)</a></h2>
+<h3 id="setup">Setup</h3>
+<ul>
+<li>
+<p>Repeating Setup For Many Tests</p>
+<ul>
+<li><code>beforeEach(() =&gt; {initialize();})</code></li>
+<li><code>afterEach(() =&gt; {clearing();});</code></li>
+</ul>
+</li>
+<li>
+<p>Scoping</p>
+<ul>
+<li>group tests together</li>
+<li>the before and after blocks only apply to the tests within that describe block</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">describe</span>(<span style="color:#e6db74">&#39;matching cities to foods&#39;</span>, () =&gt; {
+  <span style="color:#75715e">// Applies only to tests in this describe block
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">beforeEach</span>(() =&gt; {
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">initializeFoodDatabase</span>();
+  });
+
+  <span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;Vienna &lt;3 sausage&#39;</span>, () =&gt; {
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">isValidCityFoodPair</span>(<span style="color:#e6db74">&#39;Vienna&#39;</span>, <span style="color:#e6db74">&#39;Wiener Schnitzel&#39;</span>)).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+  });
+
+  <span style="color:#a6e22e">test</span>(<span style="color:#e6db74">&#39;San Juan &lt;3 plantains&#39;</span>, () =&gt; {
+    <span style="color:#a6e22e">expect</span>(<span style="color:#a6e22e">isValidCityFoodPair</span>(<span style="color:#e6db74">&#39;San Juan&#39;</span>, <span style="color:#e6db74">&#39;Mofongo&#39;</span>)).<span style="color:#a6e22e">toBe</span>(<span style="color:#66d9ef">true</span>);
+  });
+});
+</code></pre></div><p>Priority</p>
+<ul>
+<li>Top level setup</li>
+<li>Scope level setup</li>
+</ul>
+<h3 id="matchers">Matchers</h3>
+<p><a href="https://jestjs.io/docs/en/expect">Expect API</a></p>
+<h3 id="jest-on-vuehttpsalexjovercomblogwrite-the-first-vue-js-component-unit-test-in-jest"><a href="https://alexjover.com/blog/write-the-first-vue-js-component-unit-test-in-jest/">Jest on Vue</a></h3>
+<ul>
+<li>Snapshot Testing
+<ul>
+<li>Prevent UI change unexpectedly</li>
+</ul>
+</li>
+</ul>
+<h2 id="vuetify---material-design-framework">Vuetify - Material Design Framework</h2>
+<ul>
+<li><a href="https://vuetifyjs.com/en/">Offical website</a></li>
+</ul>
+<h3 id="install">Install</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vue add vuetify
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      <div class="info">
+        
+<span class="separator"><a class="category" href="/categories/notes/">Notes</a></span>
+
+        
+    <span class="separator"><a class="tag" href="/tags/web/">Web</a><a class="tag" href="/tags/vue/">Vue</a></span>
+
+      </div>
+    </div>
+
+    
+           
+    
+</div>
+
+
+                </div>
+            </div>
+        </div>
+</body>
+
+
+
+<script type="text/javascript" src="https://chlorella.github.io/js/jquery.min.86b1e8f819ee2d9099a783e50b49dff24282545fc40773861f9126b921532e4c.js" integrity="sha256-hrHo&#43;BnuLZCZp4PlC0nf8kKCVF/EB3OGH5EmuSFTLkw=" crossorigin="anonymous"></script>
+
+
+
+
+<script type="text/javascript" src="https://chlorella.github.io/js/bundle.min.0f9c74cb78f13d1f15f33daff4037c70354f98acfbb97a6f61708966675c3cae.js" integrity="sha256-D5x0y3jxPR8V8z2v9AN8cDVPmKz7uXpvYXCJZmdcPK4=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="https://chlorella.github.io/js/medium-zoom.min.92f21c856129f84aeb719459b3e6ac621a3032fd7b180a18c04e1d12083f8aba.js" integrity="sha256-kvIchWEp&#43;ErrcZRZs&#43;asYhowMv17GAoYwE4dEgg/iro=" crossorigin="anonymous"></script></html></body>
+
+</html>

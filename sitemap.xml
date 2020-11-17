@@ -83,7 +83,23 @@
   </url>
   
   <url>
+    <loc>https://chlorella.github.io/post/vue_study_note_2020/</loc>
+  </url>
+  
+  <url>
     <loc>https://chlorella.github.io/tags/index/</loc>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/categories/notes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/vue/</loc>
+  </url>
+  
+  <url>
+    <loc>https://chlorella.github.io/tags/web/</loc>
   </url>
   
 </urlset>
